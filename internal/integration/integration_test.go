@@ -9,6 +9,7 @@ import (
 var _ = Describe("integration tests", func() {
 	testPage("PhantomJS", phantomDriver.NewPage)
 	testSelection("PhantomJS", phantomDriver.NewPage)
+	testPricingReadAndReprice("PhantomJS", phantomDriver.NewPage)
 
 	if !headlessOnly {
 		testPage("ChromeDriver", chromeDriver.NewPage)
